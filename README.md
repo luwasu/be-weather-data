@@ -1,8 +1,7 @@
 # be-weather-data
 
-The function makes a call to 'https://data.geo.admin.ch/ch.meteoschweiz.messwerte-niederschlag-1d/ch.meteoschweiz.messwerte-niederschlag-1d_de.json' and response should be a JSON file like this: 
-
-
+The function makes a call to 'https://data.geo.admin.ch/ch.meteoschweiz.messwerte-niederschlag-1d/ch.meteoschweiz.messwerte-niederschlag-1d_de.json' and  should responwith a JSON file similar to this: 
+```JSON
 {
 "crs": {
 "type":"name",
@@ -47,7 +46,10 @@ The function makes a call to 'https://data.geo.admin.ch/ch.meteoschweiz.messwert
 "measurement_height": "1.50 m",
 "description":"<table><tbody><tr><td class='text-nowrap'><strong>Stationsname</strong></td><td>Bad Ragaz (RAG)</td></tr><tr><td class='text-nowrap'><strong>Stationstyp</strong></td><td>Wetterstation</td></tr><tr><td class='text-nowrap'><strong>Eigentümer</strong></td><td>MeteoSchweiz</td></tr><tr><td><strong>Niederschlag</strong></td><td>0.0 mm (12.11.2022)</td></tr><tr><td class='text-nowrap'><strong>Messhöhe</strong></td><td>497.50 m (Höhe ü. Boden: 1.50 m)</td></tr><tr><td class='text-nowrap'><strong>Link</strong></td><td><a target=\"_blank\" href=\"https://www.meteoschweiz.admin.ch/home/messwerte.html?param=messwerte-niederschlag-1d&station=RAG\">Informationen zu dieser Station</a></td></tr></tbody></table>"}
 }
-,........
+,...etc.
+```
+
+
 
 
 If the call comes back with a status 200 then it will iterate over the JSON file and find the "type":"Feature" with "ID":"BER" and output this on the console. If the API call does not responde with 200 then it will output: 'Something went wrong while making an API call' but will not start over again
