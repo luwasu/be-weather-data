@@ -1,5 +1,5 @@
 async function getMeteoData() {
-    const url = 'https://data.geo.admin.ch/ch.meteoschweiz.messwerte-niederschlag-1d/ch.meteoschweiz.messwerte-niederschlag-1d_de.jsons';
+    const url = 'https://data.geo.admin.ch/ch.meteoschweiz.messwerte-niederschlag-1d/ch.meteoschweiz.messwerte-niederschlag-1d_de.json';
     const response = await fetch(url);
 
     // output status and satus text to the console
