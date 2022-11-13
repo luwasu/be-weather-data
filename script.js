@@ -22,10 +22,7 @@ async function getMeteoData() {
         // if the response status is not 200 then return this
         return console.log('Something went wrong while making an API call')
     }
-
 }
-
-getMeteoData();
 
 
 
