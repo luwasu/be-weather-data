@@ -6,7 +6,7 @@ async function getMeteoData() {
     console.log(response.status); // 200 or 404
     console.log(response.statusText); // OK or Not Found
 
-    // if the response status is not 200 then return this
+    // if the response status is 200 then return this
     if (response.status === 200) {
         console.log("Successfully got data!")
         // resolve response as a JSON. Can also be text by replacing ".json" with ".text" 
