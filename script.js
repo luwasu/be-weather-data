@@ -11,18 +11,21 @@ async function getMeteoData() {
         console.log("Successfully got data!")
         // resolve response as a JSON. Can also be text by replacing ".json" with ".text" 
         let jsonData = await response.json();
-        
+
         // iterate over the JSON response for an ID with 'BER'
         jsonData.features.forEach(item => {
             if (item.id === 'BER') {
                 return console.log(item);
             }
         })
+    } else {
+        // if the response status is not 200 then return this
+        return console.log('Something went wrong while making an API call')
     }
-    // if the response status is not 200 then return this
-    return console.log('Something went wrong while making an API call')
+
 }
 
+getMeteoData();
 
 
 
