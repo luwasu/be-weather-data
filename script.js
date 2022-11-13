@@ -3,8 +3,7 @@ async function getMeteoData() {
     const response = await fetch(url);
 
     // output status and satus text to the console
-    console.log(response.status); // 200 or 404
-    console.log(response.statusText); // OK or Not Found
+    console.log(response.status + ' ' + response.statusText); // 200  & OK or 404 Not Found
 
     // if the response status is 200 then return this
     if (response.status === 200) {
@@ -23,6 +22,8 @@ async function getMeteoData() {
         return console.log('Something went wrong while making an API call')
     }
 }
+
+getMeteoData();
 
 
 
